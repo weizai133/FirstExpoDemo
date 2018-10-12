@@ -1,10 +1,41 @@
-import React from "React";
-import {Text} from "react-native";
+import * as React from 'react';
+import {Text,View} from "react-native";
 
-const header=()=>{
+export default class header extends React.Component {
+  constructor(props){
+    super(props);
+  }
+  render() {
+    const {textStyle, viewStyle}=styles;
+    const {headerText}=this.props;
+
     return (
-        <Text>Albums</Text>
+      <View style={viewStyle}>
+        <Text style={textStyle}>
+          {headerText}
+        </Text>
+      </View>
     );
+  }
 }
 
-export default header;
+const styles={
+  viewStyle:{
+    backgroundColor : 'blue',
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: 60,
+    paddingTop: 15,
+    shadowColor: '#000',
+    shadowOffset: {width : 0, height: 2},
+    shadowOpacity: 0.2,
+    elevation: 2,
+    position: 'relative'
+    //justifyContent=> control the vertical postion of the component
+    // alignItems=> horizontal
+    //    flex-start, flext-end, center 
+  },
+  textStyle:{
+    fontSize: 20
+  }
+} 
