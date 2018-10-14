@@ -21,7 +21,7 @@ export default class header extends React.Component {
 
 const styles={
   viewStyle:{
-    backgroundColor : 'blue',
+    backgroundColor : '#F8F8F8',
     alignItems: 'center',
     justifyContent: 'center',
     height: 60,
